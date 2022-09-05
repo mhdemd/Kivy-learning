@@ -1,25 +1,23 @@
 <DrawingSpace>:
-    canvas:
-        Ellipse:
-            pos: 10,10
-            size: 80,80
-            source: 'kivy.png'
-        Rectangle:
-            pos: 110,10
-            size: 80,80
-            source: 'kivy.png'
+    canvas.before:
         Color:
-            rgba: 0,0,1,.75
-        Line:
-            points: 10,10,390,200
-            width: 10
-            cap: 'square'
+            rgba: 1,0,0,1
+        Rectangle:
+            pos: 0,0
+            size: 100,100
+    canvas:
         Color:
             rgba: 0,1,0,1
         Rectangle:
-            pos: 210,10
-            size: 80,80
-            source: 'kivy.png'
+            pos: 100,0
+            size: 100,100
+    canvas.after:
+        Color:
+            rgba: 0,0,1,1
         Rectangle:
-            pos: 310,10
-            size: 80,80
+            pos: 200,0
+            size: 100,100
+    Button:
+        text: 'A very very very long button'
+        pos_hint: {'center_x': .5, 'center_y': .5}
+        size_hint: .9,.1
