@@ -1,23 +1,27 @@
 <DrawingSpace>:
-    canvas.before:
-        Color:
-            rgba: 1,0,0,1
-        Rectangle:
-            pos: 0,0
-            size: 100,100
+
+    pos_hint: {'x':.5, 'y':.5}
     canvas:
-        Color:
-            rgba: 0,1,0,1
         Rectangle:
-            pos: 100,0
-            size: 100,100
-    canvas.after:
+            source: 'kivy.png'
+        Rotate:
+            angle: 90
+            axis: 0,0,1
         Color:
-            rgba: 0,0,1,1
+            rgb: 1,0,0 # Red colo
         Rectangle:
-            pos: 200,0
-            size: 100,100
-    Button:
-        text: 'A very very very long button'
-        pos_hint: {'center_x': .5, 'center_y': .5}
-        size_hint: .9,.1
+            source: 'kivy.png'
+        Translate:
+            x: -100
+        Color:
+            rgb: 0,1,0 # Green c
+        Rectangle:
+            source: 'kivy.png'
+        Translate:
+            y: -100
+        Scale:
+            xyz:(.5,.5,0)
+        Color:
+            rgb: 0,0,1 # Blue co
+        Rectangle:
+            source: 'kivy.png'      
